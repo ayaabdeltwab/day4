@@ -1,0 +1,5 @@
+from fabric import Connection
+c = Connection(host='192.168.150', user='aya',
+               connect_kwargs={'password': 'P@ssw0rd'})
+result = c.run('ls -l', hide=True)
+print(result.stdout)
